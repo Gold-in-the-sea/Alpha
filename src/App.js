@@ -9,7 +9,7 @@ const Admin = loadalbe(() => import('./pages/Admin'))
 class App extends React.Component {
 
   render() {
-    return (
+    return ( 
       <HashRouter>
         <Route path='/login' component={Login}></Route>
         
