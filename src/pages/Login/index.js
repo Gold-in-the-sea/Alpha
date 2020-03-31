@@ -1,11 +1,23 @@
 import React from 'react'
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox ,message} from 'antd';
 import style from './index.module.less'
-
+import adminApi from '../../api/admin'
 class Login extends React.Component {
 
-    onFinish = (values) => {
-        console.log('Success:', values);
+    onFinish = async (values) => {
+        // console.log(values)
+        // 将用户名和密码解构
+        let {username,password} = values
+        let result = await adminApi.adminLogin(username,password)
+        console.log(result)
+        //登录成功后跳转
+        if(result.data.code==0){
+            message.success('登录成功，2s后跳转',2,()=>{
+                this.props.history.replace('/admin')
+            })
+        }else{
+            message.error('账号或密码错误请重新检查')
+        }
     };
 
     onFinishFailed = (errorInfo) => {

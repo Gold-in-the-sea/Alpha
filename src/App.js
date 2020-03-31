@@ -10,6 +10,8 @@ class App extends React.Component{
   render(){
     return(
         <HashRouter>
+          <Redirect exact from='/' to='/login'></Redirect>
+          <Redirect exact from='/admin' to='/admin/administrator'></Redirect>
           <Route path='/login' component={Login}></Route>
           <Route path='/admin' render={()=>{
             return(
