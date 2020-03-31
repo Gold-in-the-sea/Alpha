@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter,Route} from 'react-router-dom'
+import {HashRouter,Route,Redirect} from 'react-router-dom'
 import Administrator from './pages/Administrator'
 import loadalbe from './utils/loadable'
 
