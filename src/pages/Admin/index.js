@@ -21,11 +21,13 @@ class Admin extends React.Component{
           <div className={style['logo']}>
               <h1 className={style['h1']}>盒马</h1>
           </div>
-            <CustomNav></CustomNav>
+            <CustomNav></CustomNav> 
         </Sider>
         <Layout >
           <Header className="site-layout-background" style={{ padding: 0 }} />
           <Content >
+
+            {/* 获取子组件的内容 */}
            {this.props.children}
           </Content>
           <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
