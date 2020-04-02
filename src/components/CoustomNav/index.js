@@ -17,7 +17,7 @@ function jump(e){
     let {path} = e.item.props
     this.props.history.replace(path)
 }
-class Customnav extends React.Component{
+class Customnav extends React.Component{ 
 
 
     renderIcon(icon){
@@ -34,8 +34,7 @@ class Customnav extends React.Component{
             return <AreaChartOutlined />
             case 'order' :
             return <FileSearchOutlined />
-          default:
-            return <RadarChartOutlined />
+       
         }
       }
     renderItem(data){
@@ -62,8 +61,11 @@ class Customnav extends React.Component{
     }
     render(){
         return(
-            <Menu onClick={jump.bind(this)}
-            theme='dark'>
+            <Menu onClick={jump.bind(this)} 
+            mode="vertical"
+            theme='dark'
+            defaultSelectedKeys={['1']}
+            mode='inline'>
                 {this.renderItem(menulist)}
             </Menu>
         )
