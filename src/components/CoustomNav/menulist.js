@@ -15,7 +15,29 @@ export default[
         key:'3',
         title:'商品管理',
         icon:'goods',
-        path:'/admin/goods'
+        path:'/admin/goods',
+        children:[
+            {
+                key:'3-1',
+                title:'商品查看',
+                path:'/admin/goodsInfo',
+            },
+            {
+                key:'3-2',
+                title:'商品增加',
+                path:'/admin/goodsdel',
+            },
+            {
+                key:'3-3',
+                title:'商品修改',
+                path:'/admin/goodsupdate',
+            },
+            {
+                key:'3-4',
+                title:'商品删除',
+                path:'/admin/goodsdel',
+            }
+        ]
     },
     {
         key:'4',
