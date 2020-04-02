@@ -12,7 +12,9 @@ class Goods extends Component {
             {title:'_id',dataIndex:'_id',key:'_id'},
             {title:'价格',dataIndex:'price',key:'price'},
             {title:'名称',dataIndex:'name',key:'name'},
-            {title:'图片',dataIndex:'img',key:'img'},
+            {title:'图片',dataIndex:'img',key:'img',render(img){
+                return(<img src={img}/>)
+            }},
             {title:'描述',dataIndex:'desc',key:'desc'},
             {title:'种类',dataIndex:'shopType',key:'shopType'},
         
@@ -23,8 +25,8 @@ class Goods extends Component {
     }
     getListData = async () => {
         let { page, pageSize } = this.state
-        let { code, msg, list, allCount } = await goodsApi.list()
-        if (code !== 0) { return message.error(msg) }
+        let { err, msg, list, allCount } = await goodsApi.list()
+        if (err !== 0) { return message.error(msg) }
         this.setState({ list, allCount })
     }
     render() {
