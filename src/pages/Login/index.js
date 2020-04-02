@@ -11,7 +11,7 @@ class Login extends React.Component {
         let result = await adminApi.adminLogin(username,password)
         console.log(result)
         //登录成功后跳转
-        if(result.data.code==0){
+        if(result.data.code===0){
             message.success('登录成功，2s后跳转',2,()=>{
                 this.props.history.replace('/admin')
             })
