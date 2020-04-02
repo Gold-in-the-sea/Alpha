@@ -34,10 +34,7 @@ class Customnav extends React.Component{
             return <AreaChartOutlined />
             case 'order' :
             return <FileSearchOutlined />
-<<<<<<< HEAD
        
-=======
->>>>>>> qi
         }
       }
       renderItem(data){
@@ -68,16 +65,11 @@ class Customnav extends React.Component{
     }
     render(){
         return(
-<<<<<<< HEAD
             <Menu onClick={jump.bind(this)} 
             mode="vertical"
             theme='dark'
             defaultSelectedKeys={['1']}
             mode='inline'>
-=======
-            <Menu onClick={jump.bind(this)}
-            mode="vertical" theme='dark' defaultSelectedKeys={['1']} mode="inline">
->>>>>>> qi
                 {this.renderItem(menulist)}
             </Menu>
         )

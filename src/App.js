@@ -9,7 +9,6 @@ import GoodsAdd from './pages/Goods/GoodsAdd'
 const Login = loadalbe(() => import('./pages/Login'))
 const Admin = loadalbe(() => import('./pages/Admin'))
 
-<<<<<<< HEAD
 class App extends React.Component {
 
   render() {
@@ -25,27 +24,25 @@ class App extends React.Component {
               <Route path='/admin/administrator' component={Administrator}></Route>
               <Route path='/admin/goods' component={GoodsList}></Route>
               <Route path='/admin/goodsadd' component={GoodsAdd}></Route>
+              <Route path='/admin/user' component={User}></Route>
             </Admin>
           )
         }}></Route>
-      </HashRouter>
-=======
-  render(){
-    return(
-        <HashRouter>
-          {/* <Redirect exact from='/' to='/login'></Redirect> */}
-          <Route path='/login' component={Login}></Route>
-          <Route path='/admin' render={()=>{
-            return(
-              <Admin>
-                <Route path='/admin/administrator' component={Administrator}></Route>
-                <Route path='/admin/user' component={User}></Route>
-              </Admin>
-            )
-          }}></Route>
-        </HashRouter>
->>>>>>> qi
-    )
-  }
-}
+      </HashRouter>)
+  // render(){
+  //   return(
+  //       <HashRouter>
+  //         {/* <Redirect exact from='/' to='/login'></Redirect> */}
+  //         <Route path='/login' component={Login}></Route>
+  //         <Route path='/admin' render={()=>{
+  //           return(
+  //             <Admin>
+  //               <Route path='/admin/administrator' component={Administrator}></Route>
+  //             </Admin>
+  //           )
+  //         }}></Route>
+  //       </HashRouter>
+  //   )
+  // }
+}}
 export default App;
