@@ -95,14 +95,14 @@ class Admins extends Component{
         let {dataSource,columns,spinning,visible} = this.state
         return(
             <div>
+                <Spin spinning={spinning}>
                 <Card title="管理员管理">
                 <Button onClick={()=>{
                     this.setState({visible:true})
                 }} style={{marginBottom:15,borderRadius:5}} icon={<PlusCircleOutlined />} type='primary' size='small'>添加</Button>
-                <Spin spinning={spinning}>
                 <Table dataSource={dataSource} columns={columns} rowKey="_id" />
-                </Spin>
                 </Card>
+                </Spin>
                 <Modal
           title="管理员操作"
           visible={visible}

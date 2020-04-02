@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Layout } from 'antd'
+=======
+import { Layout} from 'antd'
+>>>>>>> qi
 import style from './index.module.less'
 import CustomNav from '../../components/CoustomNav'
 
