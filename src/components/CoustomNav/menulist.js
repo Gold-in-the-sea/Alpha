@@ -3,7 +3,8 @@ export default[
         key:'1',
         title:'管理员管理',
         icon:'administrator',
-        path:'/admin/administrator'
+        path:'/admin/administrator',
+       
     },
     {
         key:'2',
